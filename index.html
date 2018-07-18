@@ -1,1 +1,224 @@
-Hello World
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UW Napathon</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body class="bg-dark text-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#">UW-Napathon</a>
+        <ul class="navbar-nav my-0 ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="talksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Talks
+            </a>
+            <div class="dropdown-menu" aria-labelledby="talksDropdown">
+              <a class="dropdown-item disabled pl-3 fake-nav">Guests' Lectures:</a>
+              <a class="dropdown-item" href="#">Prof 1</a>
+              <a class="dropdown-item" href="#">Prof 2</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item disabled pl-3 fake-nav">Sponsor's Talks:</a>
+              <a class="dropdown-item" href="#">Fitbyte</a>
+              <a class="dropdown-item" href="#">SleepRound</a>
+              <a class="dropdown-item" href="#">Relax</a>
+            </div>
+          </li>
+          <li class="nav-item mr-4">
+            <a class="nav-link" href="#">Competition</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-success">Register</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class='parallax' style="background-image: url('img/koala-bear.jpg')">
+      <div class="layer">
+        <div class="title">
+          <div class="title-main">
+            UWaterloo
+            <span class="img-container">
+              <img class="textImg" src="img/cloud.png">
+              <span class="centered">Napathon</span>
+            </span>
+          </div>
+          <h3>14th, September, 2018</h3>
+          <button class="btn-lg btn-outline-light mt-3">Register</button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="mt-5 mb-4">How Much Sleep Do We Need?</h2>
+      <!-- http://web.stanford.edu/~dement/sleepless.html -->
+      <p style="font-size: 18px">The average sleep requirement for college students is <b style="font-size: 24px">well over eight hours</b></p>
+      <div class="row pb-5">
+        <div class="col-sm-6">
+          <!-- https://www.cnn.com/2017/06/12/health/student-sleep-grades-study/index.html -->
+          <p>According to a new study focused on college students and their sleep patterns shows that college students who did not go to bed or wake up at consistent times every day were more likely to have lower grades.</p>
+          <p>The chart beside shows that the correlation between number of ours of sleep and student's GPA. The more sleep time a student get, the better they perform in academic. The only student who score 4.0 GPA sleeps 10 hours per day! </p>
+        </div>
+        <div class="col-sm-6" style="background-image: url('img/sleep_vs_gpa.jpg');
+            height: 300px; background-size: auto 300px; background-repeat: no-repeat;
+            opacity: 0.9">
+        </div>
+      </div>
+    </div>
+    <div class='parallax' style="height:300px; background-image: url('img/starry_night.jpg')">
+      <div class="layer">
+        <div class="title" style="top:40%; height: auto">
+          <h1>MORE SLEEP == HIGHER GPA!!!</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="mt-5 mb-5">Importance of Enough and Quality Sleep</h2>
+      <div class="row pb-5">
+        <div class="col-sm">
+          <p>Please watch this Ted Talk by Russell Foster, who is a circadian neuroscientist. In this talk, Foster shares three popular theories about why we sleep, busts some myths about how much sleep we need at different ages.</p>
+        </div>
+        <div class="col-sm">
+          <iframe style="float:right" width="auto" height="auto"
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+          src="https://www.youtube.com/embed/LWULB9Aoopc">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm pb-5">
+          <div class="card bg-dark border-light" style="height: 100%">
+            <img class="card-img-top" src="img/restoration.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Restoration</h5>
+              <p class="card-text">Essentially, all the stuff we've burned up during the day, we restore, we replace, we rebuild during the night. Within the brain, a whole raft of genes have been shown to be turned on only during sleep, and those genes are associated with restoration and metabolic pathways. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm pb-5">
+          <div class="card bg-dark border-light" style="height: 100%">
+            <img class="card-img-top" src="img/energy_conservation.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Energy conservation</h5>
+              <p class="card-text"> You sleep to save calories. If you compare an individual who has slept at night, or stayed awake and hasn't moved very much, the energy saving of sleeping is about 110 calories a night. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm pb-5">
+          <div class="card bg-dark border-light" style="height: 100%">
+            <img class="card-img-top" src="img/brain_process.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Brain processing and memory consolidation</h5>
+              <p class="card-text">We have ability to come up with novel solutions to complex problems is hugely enhanced by a night of sleep. It's been estimated that sleaping can give us a threefold advantage. Sleeping at night enhances our creativity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='parallax' style="height: 150px; background-image: url('img/new_slc.jpg')">
+      <div class="layer">
+        <div class="title" style="top:40%; left: 10%; height: auto; text-align: left">
+          <h1>Our Guest Lecturers:</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row pt-4 pb-2">
+        <div class="col-sm-4 pb-4" style="background-image: url('img/ford.jpg');
+            height: 250px; background-size: auto 300px; background-repeat: no-repeat;
+            opacity: 0.9">
+        </div>
+        <div class="col-sm-8 pb-4">
+          <h1>Dr. Robert Ford</h1>
+          <p>******place holder*******Ford was born in the U.K. and had at least one brother. His father was an alcoholic (this was something he would later include in the 'family' Arnold had made for him). ******place holder*******</p>
+          <p>Will give lectures about <b>the importance of sleep</b>.</p>
+        </div>
+      </div>
+      <div class="dropdown-divider"></div>
+      <div class="row pt-4">
+        <div class="col-sm-8 pb-4">
+          <h1>Dr. Who</h1>
+          <p>******place holder*******They were the universe's "greatest defender", having saved the cosmos thousands of times throughout a long life, becoming a great legend across the whole universe. ******place holder*******</p>
+          <p>Will give lectures about <b>how to achieve good sleep habit</b>.</p>
+        </div>
+        <div class="col-sm-4 pb-4" style="background-image: url('img/doctor_who.png');
+            height: 250px; background-size: auto 180px; background-repeat: no-repeat;
+            opacity: 0.9">
+        </div>
+      </div>
+    </div>
+
+    <div class='parallax' style="height: 150px; background-image: url('img/sponsor_bg.jpg')">
+      <div class="layer">
+        <div class="title" style="top:40%; height: auto">
+          <h1>Introduce Our Sponsors!</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="pt-3">Stark Industries</h1>
+      <div class="row pt-4 pb-4">
+        <div class="col-sm-4 pb-4" style="background-image: url('img/sponsor_talk1.jpg');
+            height: 200px; background-size: auto 200px; background-repeat: no-repeat;
+            opacity: 0.9">
+        </div>
+        <div class="col-sm-8 pb-4">
+          <h1>Tony Stark</h1>
+          <p>******place holder*******Tony Stark, the CEO of Stark Intustries will demonstrate their latest wearable technologies and how they can monitor and improve sleep quality. ******place holder*******</p>
+        </div>
+      </div>
+      <h2 class="pb-2">Their Latest Products: </h2>
+      <div class="row pb-3">
+        <img src="img/fitbit.jpeg" height="300px" class="p-2 rounded float-left">
+        <img src="img/smart_watch.jpeg" height="300px" class="p-2 rounded float-left">
+        <img src="img/sponsor2.jpg" height="300px" class="p-2 rounded float-left">
+        <img src="img/sponsor2.jpg" height="300px" class="p-2 rounded float-left">
+      </div>
+      <div class="dropdown-divider"></div>
+      <h1 class="pt-3">Stark Industries</h1>
+      <div class="row pt-4 pb-4">
+        <div class="col-sm-4 pb-4" style="background-image: url('img/sponsor_talk1.jpg');
+            height: 200px; background-size: auto 200px; background-repeat: no-repeat;
+            opacity: 0.9">
+        </div>
+        <div class="col-sm-8 pb-4">
+          <h1>Tony Stark</h1>
+          <p>******place holder*******Tony Stark, the CEO of Stark Intustries will demonstrate their latest wearable technologies and how they can monitor and improve sleep quality. ******place holder*******</p>
+        </div>
+      </div>
+      <h2 class="pb-2">App Showcase: </h2>
+      <div class="row pb-3">
+        <img src="img/app1.jpg" height="300px" class="p-2 rounded float-left">
+        <img src="img/app2.jpg" height="300px" class="p-2 rounded float-left">
+      </div>
+    </div>
+
+    <div class='parallax' style="height: 400px; background-image: url('img/napping.jpg')">
+      <div class="layer">
+        <div class="title" style="top:40%; height: auto">
+          <h1>The Nap Competition!</h1>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="lib/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
