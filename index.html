@@ -16,26 +16,26 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <a class="navbar-brand" href="#">UW-Napathon</a>
         <ul class="navbar-nav my-0 ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="#AboutSleep">About</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="talksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Talks
             </a>
             <div class="dropdown-menu" aria-labelledby="talksDropdown">
-              <a class="dropdown-item disabled pl-3 fake-nav">Guests' Lectures:</a>
-              <a class="dropdown-item" href="#">Prof 1</a>
-              <a class="dropdown-item" href="#">Prof 2</a>
+              <a id="GuestLectures" class="dropdown-item disabled pl-3 fake-nav">Guests' Lectures:</a>
+              <a class="dropdown-item" href="#GL1">Jeanette Gascho</a>
+              <a class="dropdown-item" href="#GL2">Prof 2</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item disabled pl-3 fake-nav">Sponsor's Talks:</a>
-              <a class="dropdown-item" href="#">Fitbyte</a>
-              <a class="dropdown-item" href="#">SleepRound</a>
-              <a class="dropdown-item" href="#">Relax</a>
+              <a class="dropdown-item" href="#Fitbyte">Fitbyte</a>
+              <a class="dropdown-item" href="#Relax">Relax Melodies</a>
+              <a class="dropdown-item" href="#SleepCircle">Sleep Circle</a>
             </div>
           </li>
           <li class="nav-item mr-4">
-            <a class="nav-link" href="#">Competition</a>
+            <a class="nav-link" href="#Competition">Competition</a>
           </li>
           <li class="nav-item">
             <button class="btn btn-outline-success">Register</button>
@@ -59,10 +59,10 @@
       </div>
     </div>
     <div class="container">
-      <h2 class="mt-5 mb-4">How Much Sleep Do We Need?</h2>
+      <h2 class="mt-5 mb-4 header" id="AboutSleep">How Much Sleep Do We Need?</h2>
       <!-- http://web.stanford.edu/~dement/sleepless.html -->
       <p style="font-size: 18px">The average sleep requirement for college students is <b style="font-size: 24px">well over eight hours</b></p>
-      <div class="row pb-5">
+      <div class="row pb-3">
         <div class="col-sm-6">
           <!-- https://www.cnn.com/2017/06/12/health/student-sleep-grades-study/index.html -->
           <p>According to a new study focused on college students and their sleep patterns shows that college students who did not go to bed or wake up at consistent times every day were more likely to have lower grades.</p>
@@ -73,6 +73,25 @@
             opacity: 0.9">
         </div>
       </div>
+      <button type="button" id='quizBtn'
+          class="btn btn-outline-warning btn-lg btn-block mb-3"
+          data-toggle="modal" data-target="#quizModal">
+        Take a Sleep Quiz
+      </button>
+      <div id="scoreDiv">
+        <div id="scoreDivHeader">
+          Your Sleepy Score: <span id='scoreVal'></span>
+        </div>
+        <div class="progress">
+          <div id="sleep-score-bar" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div id='score-explain'> </div>
+        <button type="button"
+            class="btn btn-outline-success btn-lg btn-block mb-3"
+            data-toggle="modal" data-target="#quizModal">
+          Retake the quiz
+        </button>
+      </div>
     </div>
     <div class='parallax' style="height:300px; background-image: url('img/starry_night.jpg')">
       <div class="layer">
@@ -82,7 +101,7 @@
       </div>
     </div>
     <div class="container">
-      <h2 class="mt-5 mb-5">Importance of Enough and Quality Sleep</h2>
+      <h2 class="mt-5 mb-5 header">Importance of Enough and Quality Sleep</h2>
       <div class="row pb-5">
         <div class="col-sm">
           <p>Please watch this Ted Talk by Russell Foster, who is a circadian neuroscientist. In this talk, Foster shares three popular theories about why we sleep, busts some myths about how much sleep we need at different ages.</p>
@@ -139,20 +158,19 @@
     </div>
     <div class="container">
       <div class="row pt-4 pb-2">
-        <div class="col-sm-4 pb-4" style="background-image: url('img/ford.jpg');
-            height: 250px; background-size: auto 300px; background-repeat: no-repeat;
+        <div class="col-sm-4 pb-4" style="background-image: url('img/guest_lecture1.jpg');
+            height: 250px; background-size: auto 200px; background-repeat: no-repeat;
             opacity: 0.9">
         </div>
-        <div class="col-sm-8 pb-4">
-          <h1>Dr. Robert Ford</h1>
-          <p>******place holder*******Ford was born in the U.K. and had at least one brother. His father was an alcoholic (this was something he would later include in the 'family' Arnold had made for him). ******place holder*******</p>
-          <p>Will give lectures about <b>the importance of sleep</b>.</p>
+        <div class="col-sm-8 pb-4" id="GL1">
+          <h1 class='header'>Jeanette Gascho</h1>
+          <p>Jeanette Gascho is workin in the Campus Wellness Administration in University of Waterloo. She will give a lectore about <b>Sleeping Well</b>. She will show Stats about sleeping issues of University of Waterloo students and give tips on how to improve sleep quality.</p>
         </div>
       </div>
-      <div class="dropdown-divider"></div>
+      <div class="dropdown-divider" id="GL2"></div>
       <div class="row pt-4">
         <div class="col-sm-8 pb-4">
-          <h1>Dr. Who</h1>
+          <h1 class='header'>Dr. Who</h1>
           <p>******place holder*******They were the universe's "greatest defender", having saved the cosmos thousands of times throughout a long life, becoming a great legend across the whole universe. ******place holder*******</p>
           <p>Will give lectures about <b>how to achieve good sleep habit</b>.</p>
         </div>
@@ -163,7 +181,7 @@
       </div>
     </div>
 
-    <div class='parallax' style="height: 150px; background-image: url('img/sponsor_bg.jpg')">
+    <div id="Sponsors" class='parallax' style="height: 150px; background-image: url('img/sponsor_bg.jpg')">
       <div class="layer">
         <div class="title" style="top:40%; height: auto">
           <h1>Introduce Our Sponsors!</h1>
@@ -171,7 +189,7 @@
       </div>
     </div>
     <div class="container">
-      <h1 class="pt-3">Stark Industries</h1>
+      <h1 class="pt-3 header" id="Fitbyte">Fitbyte</h1>
       <div class="row pt-4 pb-4">
         <div class="col-sm-4 pb-4" style="background-image: url('img/sponsor_talk1.jpg');
             height: 200px; background-size: auto 200px; background-repeat: no-repeat;
@@ -179,36 +197,41 @@
         </div>
         <div class="col-sm-8 pb-4">
           <h1>Tony Stark</h1>
-          <p>******place holder*******Tony Stark, the CEO of Stark Intustries will demonstrate their latest wearable technologies and how they can monitor and improve sleep quality. ******place holder*******</p>
+          <p> The CTO of Fitbyte will give a lecture during the Napathon event. He will demonstrate their latest wearable technologies and how these products can improve life style and sleep quality.</p>
+          <p>For more details of ther product, <a href="">click here to see their website</a></p>
         </div>
       </div>
-      <h2 class="pb-2">Their Latest Products: </h2>
+      <h3 class="pb-2">Their Latest Products: </h3>
       <div class="row pb-3">
         <img src="img/fitbit.jpeg" height="300px" class="p-2 rounded float-left">
         <img src="img/smart_watch.jpeg" height="300px" class="p-2 rounded float-left">
-        <img src="img/sponsor2.jpg" height="300px" class="p-2 rounded float-left">
-        <img src="img/sponsor2.jpg" height="300px" class="p-2 rounded float-left">
+        <img src="img/sponsor2.jpeg" height="300px" class="p-2 rounded float-left">
       </div>
       <div class="dropdown-divider"></div>
-      <h1 class="pt-3">Stark Industries</h1>
+      <h1 class="pt-3 header" id="Relax">Relax Melodies App</h1>
       <div class="row pt-4 pb-4">
-        <div class="col-sm-4 pb-4" style="background-image: url('img/sponsor_talk1.jpg');
-            height: 200px; background-size: auto 200px; background-repeat: no-repeat;
-            opacity: 0.9">
-        </div>
-        <div class="col-sm-8 pb-4">
-          <h1>Tony Stark</h1>
-          <p>******place holder*******Tony Stark, the CEO of Stark Intustries will demonstrate their latest wearable technologies and how they can monitor and improve sleep quality. ******place holder*******</p>
+        <div class="col-sm">
+          <p>This is a smartphone app that can mix beautiful sounds or produce alpha/beta sound waves. These sounds can help relax and make your brain calm down. <a href="">Click here</a> to view more details about their apps.</p>
         </div>
       </div>
-      <h2 class="pb-2">App Showcase: </h2>
       <div class="row pb-3">
-        <img src="img/app1.jpg" height="300px" class="p-2 rounded float-left">
-        <img src="img/app2.jpg" height="300px" class="p-2 rounded float-left">
+        <img src="img/sponsor2_1.jpg" height="300px" class="p-2 rounded float-left">
+        <img src="img/sponsor2_2.jpg" height="300px" class="p-2 rounded float-left">
+      </div>
+      <div class="dropdown-divider"></div>
+      <h1 id="SleepCircle" class="pt-3 header">Sleep Circle App</h1>
+      <div class="row pt-4 pb-4">
+        <div class="col-sm">
+          <p>This is smartphone app turns your phone into a sleep tracker and alarm clock. <a href="">Click here</a> to view more details about their apps.</p>
+        </div>
+      </div>
+      <div class="row pb-3">
+        <img src="img/sponsor3_1.jpeg" height="300px" class="p-2 rounded float-left">
+        <img src="img/sponsor3_2.png" height="300px" class="p-2 rounded float-left">
       </div>
     </div>
 
-    <div class='parallax' style="height: 400px; background-image: url('img/napping.jpg')">
+    <div id="Competition" class='parallax' style="height: 400px; background-image: url('img/napping.jpg')">
       <div class="layer">
         <div class="title" style="top:40%; height: auto">
           <h1>The Nap Competition!</h1>
@@ -217,8 +240,178 @@
     </div>
 
 
+    <!-- Quiz Modal -->
+    <div class="modal fade" id="quizModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Your Sleep Quiz!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="header">Use the scale below to rate the likelihood that you would fall asleep durint that activity.</div>
+            <table class="table table-borderless" align="center">
+              <thead>
+                <tr>
+                  <th scope="col">Question</th>
+                  <th scope="col">Never</th>
+                  <th scope="col">Seldomly</th>
+                  <th scope="col">Sometimes</th>
+                  <th scope="col">Usually</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Sitting and reading</th>
+                  <td><input class="form-check-input q1" type="radio" name="q1" value=0></td>
+                  <td><input class="form-check-input q1" type="radio" name="q1" value=1></td>
+                  <td><input class="form-check-input q1" type="radio" name="q1" value=2></td>
+                  <td><input class="form-check-input q1" type="radio" name="q1" value=3></td>
+                </tr>
+                <tr>
+                  <th scope="row">Watching TV</th>
+                  <td><input class="form-check-input q2" type="radio" name="q2" value=0></td>
+                  <td><input class="form-check-input q2" type="radio" name="q2" value=1></td>
+                  <td><input class="form-check-input q2" type="radio" name="q2" value=2></td>
+                  <td><input class="form-check-input q2" type="radio" name="q2" value=3></td>
+                </tr>
+                <tr>
+                  <th scope="row">Sitting inactive in a public area</th>
+                  <td><input class="form-check-input q3" type="radio" name="q3" value=0></td>
+                  <td><input class="form-check-input q3" type="radio" name="q3" value=1></td>
+                  <td><input class="form-check-input q3" type="radio" name="q3" value=2></td>
+                  <td><input class="form-check-input q3" type="radio" name="q3" value=3></td>
+                </tr>
+                <tr>
+                  <th scope="row">As a passenger in a car</th>
+                  <td><input class="form-check-input q4" type="radio" name="q4" value=0></td>
+                  <td><input class="form-check-input q4" type="radio" name="q4" value=1></td>
+                  <td><input class="form-check-input q4" type="radio" name="q4" value=2></td>
+                  <td><input class="form-check-input q4" type="radio" name="q4" value=3></td>
+                </tr>
+                <tr>
+                  <th scope="row">Sitting and talking to someone</th>
+                  <td><input class="form-check-input q5" type="radio" name="q5" value=0></td>
+                  <td><input class="form-check-input q5" type="radio" name="q5" value=1></td>
+                  <td><input class="form-check-input q5" type="radio" name="q5" value=2></td>
+                  <td><input class="form-check-input q5" type="radio" name="q5" value=3></td>
+                </tr>
+                <tr>
+                  <th scope="row">Lying down in the afternoon to rest</th>
+                  <td><input class="form-check-input q6" type="radio" name="q6" value=0></td>
+                  <td><input class="form-check-input q6" type="radio" name="q6" value=1></td>
+                  <td><input class="form-check-input q6" type="radio" name="q6" value=2></td>
+                  <td><input class="form-check-input q6" type="radio" name="q6" value=3></td>
+                </tr>
+                <tr>
+                  <th scope="row">In a car while stopped in tracffic</th>
+                  <td><input class="form-check-input q7" type="radio" name="q7" value=0></td>
+                  <td><input class="form-check-input q7" type="radio" name="q7" value=1></td>
+                  <td><input class="form-check-input q7" type="radio" name="q7" value=2></td>
+                  <td><input class="form-check-input q7" type="radio" name="q7" value=3></td>
+                </tr>
+                <tr>
+                  <th scope="row">Sitting quietly afterl unch</th>
+                  <td><input class="form-check-input q8" type="radio" name="q8" value=0></td>
+                  <td><input class="form-check-input q8" type="radio" name="q8" value=1></td>
+                  <td><input class="form-check-input q8" type="radio" name="q8" value=2></td>
+                  <td><input class="form-check-input q8" type="radio" name="q8" value=3></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" onclick="submitQuiz()" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm pb-5">
+          <div class="card bg-dark border-light" style="height: 100%">
+            <img class="card-img-top" src="img/prizes.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Win Useful Prizes!</h5>
+              <p class="card-text">The grand prize will be a fitness tracker given by our sponsor. And eveyone have a chance to get a sleep mask or a UW-Napathon Pillow!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm pb-5">
+          <div class="card bg-dark border-light" style="height: 100%">
+            <img class="card-img-top" src="img/sleeptech.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Try-out Sleep Aid Technology!</h5>
+              <p class="card-text"> During the competition, you will have a chance to try-out the latest wearable technologies in our sponsor's booth! </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm pb-5">
+          <div class="card bg-dark border-light" style="height: 100%">
+            <img class="card-img-top" src="img/sleepstats.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Learn Your Sleep Stats!</h5>
+              <p class="card-text">We will use a sleep tracker to monitor you napping. And all participants will be ranked by the sleep score using the tracker's app!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="header pb-2">Competition Rules</h1>
+      <ul>
+        <li>Sleep for at least 45 min, if you cannot, at least try to keep your eyes closed during that time</li>
+        <li>Snores are allowed :)</li>
+        <li>BYOP (Bring Your Own Pillow) or not</li>
+        <li>The athletes are rated and ranked by a sleep tracker</li>
+      </ul>
+    </div>
+    <footer class="page-footer font-small blue pt-4 text-secondary" style="background-color: #292e33">
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+          <!-- Grid row -->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+
+              <!-- Content -->
+              <h5 class="text-uppercase">UW-Napathon</h5>
+              <p>A Fake Website for ENGL119 Project</p>
+            </div>
+            <!-- Grid column -->
+            <hr class="clearfix w-100 d-md-none pb-3">
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+                <!-- Links -->
+                <h5 class="text-uppercase">Links</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#AboutSleep">About Sleep</a>
+                  </li>
+                  <li>
+                    <a href="#GuestLectures">Guest Lectures</a>
+                  </li>
+                  <li>
+                    <a href="#Sponsors">Sponsors</a>
+                  </li>
+                  <li>
+                    <a href="#Competition">The Nap Competition</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+          <b> Team Napathon</b>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
 
     <script src="lib/jquery.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./src/main.js"></script>
   </body>
 </html>
