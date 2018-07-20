@@ -17,7 +17,10 @@
         <a class="navbar-brand" href="#">UW-Napathon</a>
         <ul class="navbar-nav my-0 ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#AboutSleep">About</a>
+            <a class="nav-link" href="#AboutSleep">Why Sleep</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#EventPlan">About</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="talksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -38,7 +41,10 @@
             <a class="nav-link" href="#Competition">Competition</a>
           </li>
           <li class="nav-item">
-            <button class="btn btn-outline-success">Register</button>
+            <button class="btn btn-outline-success"
+                data-toggle="modal" data-target="#registerModal">
+              Register
+            </button>
           </li>
         </ul>
       </div>
@@ -54,12 +60,15 @@
             </span>
           </div>
           <h3>14th, September, 2018</h3>
-          <button class="btn-lg btn-outline-light mt-3">Register</button>
+          <button class="btn-lg btn-outline-light mt-3"
+              data-toggle="modal" data-target="#registerModal">
+            Register
+          </button>
         </div>
       </div>
     </div>
     <div class="container">
-      <h2 class="mt-5 mb-4 header" id="AboutSleep">How Much Sleep Do We Need?</h2>
+      <h2 id="AboutSleep" class="mt-5 mb-4 header">How Much Sleep Do We Need?</h2>
       <!-- http://web.stanford.edu/~dement/sleepless.html -->
       <p style="font-size: 18px">The average sleep requirement for college students is <b style="font-size: 24px">well over eight hours</b></p>
       <div class="row pb-3">
@@ -149,28 +158,83 @@
       </div>
     </div>
 
-    <div class='parallax' style="height: 150px; background-image: url('img/new_slc.jpg')">
+    <div id="EventPlan" class='parallax' style="height: 150px; background-image: url('img/new_slc.jpg')">
       <div class="layer">
         <div class="title" style="top:40%; left: 10%; width: 70%; height: auto; text-align: left">
-          <h1>Our Guest Lecturers:</h1>
+          <h1>Event Plan</h1>
         </div>
       </div>
     </div>
     <div class="container">
+      <table class="table bg-dark mt-4">
+        <thead>
+          <tr>
+            <th scope="col">Event</th>
+            <th scope="col">Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Openning Speech</th>
+            <td>12:30 - 12:40pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Guest Lectures</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th class="pl-5" scope="row">Guest Lecture 1</th>
+            <td>12:40 - 1:00pm</td>
+          </tr>
+          <tr>
+            <th class="pl-5" scope="row">Guest Lecture 2</th>
+            <td>1:00 - 1:15pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Sponsor's Talks</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th class="pl-5" scope="row">Sponsor's Talk (Fitbyte)</th>
+            <td>1:15 - 1:30pm</td>
+          </tr>
+          <tr>
+            <th class="pl-5" scope="row">Sponsor's Talk (Relax Melodies)</th>
+            <td>1:30 - 1:40pm</td>
+          </tr>
+          <tr>
+            <th class="pl-5" scope="row">Sponsor's Talk (Sleep Circle)</th>
+            <td>1:40 - 1:50pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Students' Developer App Demonstration</th>
+            <td>1:50 - 2:00pm</td>
+          </tr>
+          <tr>
+            <th scope="row">The Nap Competition</th>
+            <td>2:00 - 4:30pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Closing Speech & Prize Give-away</th>
+            <td>4:30 - 5:00pm</td>
+          </tr>
+        </tbody>
+      </table>
+      <h1 class="header pt-4">Our Guest Lecturers:</h1>
       <div class="row pt-4 pb-2">
         <div class="col-sm-4 pb-4" style="background-image: url('img/guest_lecture1.jpg');
             height: 250px; background-size: auto 200px; background-repeat: no-repeat;
             opacity: 0.9">
         </div>
         <div class="col-sm-8 pb-4" id="GL1">
-          <h1 class='header'>Jeanette Gascho</h1>
+          <h2 class='header'>Jeanette Gascho</h2>
           <p>Jeanette Gascho is workin in the Campus Wellness Administration in University of Waterloo. She will give a lectore about <b>Sleeping Well</b>. She will show Stats about sleeping issues of University of Waterloo students and give tips on how to improve sleep quality.</p>
         </div>
       </div>
       <div class="dropdown-divider" id="GL2"></div>
       <div class="row pt-4">
         <div class="col-sm-8 pb-4">
-          <h1 class='header'>Dr. Who</h1>
+          <h2 class='header'>Dr. Who</h2>
           <p>******place holder*******They were the universe's "greatest defender", having saved the cosmos thousands of times throughout a long life, becoming a great legend across the whole universe. ******place holder*******</p>
           <p>Will give lectures about <b>how to achieve good sleep habit</b>.</p>
         </div>
@@ -238,8 +302,86 @@
         </div>
       </div>
     </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm pb-5">
+          <div class="card bg-dark border-light" style="height: 100%">
+            <img class="card-img-top" src="img/prizes.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Win Useful Prizes!</h5>
+              <p class="card-text">The grand prize will be a fitness tracker given by our sponsor. And eveyone have a chance to get a sleep mask or a UW-Napathon Pillow!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm pb-5">
+          <div class="card bg-dark border-light" style="height: 100%">
+            <img class="card-img-top" src="img/sleeptech.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Try-out Sleep Aid Technology!</h5>
+              <p class="card-text"> During the competition, you will have a chance to try-out the latest wearable technologies in our sponsor's booth! </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm pb-5">
+          <div class="card bg-dark border-light" style="height: 100%">
+            <img class="card-img-top" src="img/sleepstats.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Learn Your Sleep Stats!</h5>
+              <p class="card-text">We will use a sleep tracker to monitor you napping. And all participants will be ranked by the sleep score using the tracker's app!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="header pb-2">Competition Rules</h1>
+      <ul>
+        <li>Sleep for at least 45 min, if you cannot, at least try to keep your eyes closed during that time</li>
+        <li>Snores are allowed :)</li>
+        <li>BYOP (Bring Your Own Pillow) or not</li>
+        <li>The athletes are rated and ranked by a sleep tracker</li>
+      </ul>
+    </div>
+    <footer class="page-footer font-small blue pt-4 text-secondary" style="background-color: #292e33">
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
 
-
+            <!-- Content -->
+            <h5 class="text-uppercase">UW-Napathon</h5>
+            <p>A Fake Website for ENGL119 Project</p>
+          </div>
+          <!-- Grid column -->
+          <hr class="clearfix w-100 d-md-none pb-3">
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+              <!-- Links -->
+              <h5 class="text-uppercase">Links</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#AboutSleep">Why Sleep</a>
+                </li>
+                <li>
+                  <a href="#EventPlan">Event Plan</a>
+                </li>
+                <li>
+                  <a href="#GuestLectures">Guest Lectures</a>
+                </li>
+                <li>
+                  <a href="#Sponsors">Sponsors</a>
+                </li>
+                <li>
+                  <a href="#Competition">The Nap Competition</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <b> Team Napathon</b>
+      </div>
+    </footer>
     <!-- Quiz Modal -->
     <div class="modal fade" id="quizModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -329,86 +471,43 @@
         </div>
       </div>
     </div>
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-sm pb-5">
-          <div class="card bg-dark border-light" style="height: 100%">
-            <img class="card-img-top" src="img/prizes.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Win Useful Prizes!</h5>
-              <p class="card-text">The grand prize will be a fitness tracker given by our sponsor. And eveyone have a chance to get a sleep mask or a UW-Napathon Pillow!</p>
-            </div>
+
+    <!-- Quiz Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Register For Napathon</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-        </div>
-        <div class="col-sm pb-5">
-          <div class="card bg-dark border-light" style="height: 100%">
-            <img class="card-img-top" src="img/sleeptech.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Try-out Sleep Aid Technology!</h5>
-              <p class="card-text"> During the competition, you will have a chance to try-out the latest wearable technologies in our sponsor's booth! </p>
+          <div class="modal-body"><form>
+            <div class="form-group">
+              <label for="email">UW Email address</label>
+              <input id="email" type="email" class="form-control" placeholder="Enter email">
             </div>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input id="name" type="name" class="form-control" placeholder="Enter your name">
+            </div>
+            <label for="time-slot">You prefered time slot</label>
+            <select multiple class="form-control" id="time-slot">
+              <option>2:00 - 2:30pm</option>
+              <option>2:30 - 3:00pm</option>
+              <option>3:00 - 3:30pm</option>
+              <option>3:30 - 4:00pm</option>
+              <option>4:00 - 4:30pm</option>
+            </select>
+          </form>
           </div>
-        </div>
-        <div class="col-sm pb-5">
-          <div class="card bg-dark border-light" style="height: 100%">
-            <img class="card-img-top" src="img/sleepstats.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Learn Your Sleep Stats!</h5>
-              <p class="card-text">We will use a sleep tracker to monitor you napping. And all participants will be ranked by the sleep score using the tracker's app!</p>
-            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" data-dismiss="modal" class="btn btn-primary">Submit</button>
           </div>
         </div>
       </div>
-      <h1 class="header pb-2">Competition Rules</h1>
-      <ul>
-        <li>Sleep for at least 45 min, if you cannot, at least try to keep your eyes closed during that time</li>
-        <li>Snores are allowed :)</li>
-        <li>BYOP (Bring Your Own Pillow) or not</li>
-        <li>The athletes are rated and ranked by a sleep tracker</li>
-      </ul>
     </div>
-    <footer class="page-footer font-small blue pt-4 text-secondary" style="background-color: #292e33">
-        <!-- Footer Links -->
-        <div class="container-fluid text-center text-md-left">
-          <!-- Grid row -->
-          <div class="row">
-            <!-- Grid column -->
-            <div class="col-md-6 mt-md-0 mt-3">
-
-              <!-- Content -->
-              <h5 class="text-uppercase">UW-Napathon</h5>
-              <p>A Fake Website for ENGL119 Project</p>
-            </div>
-            <!-- Grid column -->
-            <hr class="clearfix w-100 d-md-none pb-3">
-            <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3">
-                <!-- Links -->
-                <h5 class="text-uppercase">Links</h5>
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="#AboutSleep">About Sleep</a>
-                  </li>
-                  <li>
-                    <a href="#GuestLectures">Guest Lectures</a>
-                  </li>
-                  <li>
-                    <a href="#Sponsors">Sponsors</a>
-                  </li>
-                  <li>
-                    <a href="#Competition">The Nap Competition</a>
-                  </li>
-                </ul>
-              </div>
-          </div>
-        </div>
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2018 Copyright:
-          <b> Team Napathon</b>
-        </div>
-        <!-- Copyright -->
-      </footer>
-      <!-- Footer -->
 
     <script src="lib/jquery.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
